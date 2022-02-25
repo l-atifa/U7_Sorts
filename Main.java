@@ -59,7 +59,7 @@ class Main{
         int minIndex = i;
         for (int k = i + 1; k < wordsSelect.length; k++)
       {
-        if (wordsSelect[k].compareTo(wordsSelect[minIndex]) <//if one has lower than other in terms of ascii value)
+        if (wordsSelect[k].compareTo(wordsSelect[minIndex]) > -1)//if one has lower than other in terms of ascii value)
         {
           minIndex = k;
         }
@@ -71,8 +71,19 @@ class Main{
 
     //Insertion Sort with String Array
     String[] wordsInsert = {"paint" , "cheer" , "dance" , "wish" , "fall"};
-        //the idea of insertion sort is to compare 2 + n < length
-        //reorder piece by piece
+    for (int j = 1; j < wordsInsert.length; j++)
+    {
+      String temp = wordsInsert[j];
+      int possibleIndex = j;
+      while (possibleIndex > 0 && temp.compareTo( elements2[possibleIndex - 1] > -1) //understand loop
+      {
+        wordsInsert[possibleIndex] = wordsInsert[possibleIndex - 1];
+        possibleIndex--;
+        
+      }
+      wordsInsert[possibleIndex] = temp;
+    }
+        
 
     //Selection Sort with Integer ArrayList
     //Insertion Sort with Integer ArrayList
