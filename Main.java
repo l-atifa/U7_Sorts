@@ -231,8 +231,6 @@ class Main{
 
       System.out.println(salIns);
     }
-
-    //check printing requirements for ALL 
     
   }
 }
